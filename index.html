@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function countElement(arr, value) {
+        var count = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] == value) {
+                count++
+            }
+        }
+        return count;
+    }
+
+    function dispArr(arr) {
+        for (var i = 0; i < arr.length; i++) {
+            document.write(arr[i] + "_");
+            if (i % 10 == 0) {
+                document.write("<br/>");
+            }
+        }
+    }
+
+    var nums = [];
+    for (var i = 0; i < 5; i++) {
+        nums.push(prompt());
+    }
+    var numberSearch = prompt("Input search number: ");
+    var result = countElement(nums, parseInt(numberSearch));
+    dispArr(nums);
+    document.write("<br/>");
+    document.write("Element " + parseInt(numberSearch) + " to appear " + result + " times.");
+</script>
+</body>
+</html>
